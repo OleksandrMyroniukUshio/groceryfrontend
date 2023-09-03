@@ -1,0 +1,31 @@
+body {
+    margin-top: 100px;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.center-text {
+    text-align: center;
+    font-size: 30px;
+}
+
+.link {
+    display:block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .center-text {
+        font-size: 24px;
+    }
+    
+    .link {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+}

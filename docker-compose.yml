@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  groceryfrontend:
+    image: bernk4stel/groceryfrontend
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 4200:80
+      - 4200:443

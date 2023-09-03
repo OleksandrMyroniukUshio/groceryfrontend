@@ -1,0 +1,35 @@
+<div class="main-component-container">
+    <div class="grocery-input">
+      <p id="main-title">Groceries list</p>
+      <form id="groceries-action" (submit)="addGrocery(groceryName.value, groceryType.value); $event.preventDefault()">
+        <div class="input-container">
+          <input type="text" id="grocery-name" name="groceries-input" placeholder="Products name" autocomplete="off" required #groceryName >
+          <select name="grocery-types" id="grocery-type" required #groceryType>
+            <option value="" disabled selected>Select a type</option>
+            <option *ngFor="let type of groceryTypes | keyvalue" [value]="type.value">{{ type.key }}</option>
+          </select>
+        </div>
+        <br>
+        <input type="submit" id="grocery-submit" value="Add to the list">
+      </form>
+    </div>
+    
+    <div class="grocery-list" *ngIf="groceries.length>0">
+      <table>
+        <thead>
+          <tr>
+            <th rowspan="2">Name</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let grocery of groceries; let i = index" [class.crossed-out]="grocery.isBought" (click)="changeState(grocery)">
+            <td>{{ grocery.name }}</td>
+            <td>{{ grocery.type }}</td>
+            <td><button (click)="deleteGrocery(grocery.id)" id="delete-button">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <button (click)="clearGroceries()" id="clear-button">Clear List</button>
+    </div>
+  </div>

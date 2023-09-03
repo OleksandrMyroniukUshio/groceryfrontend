@@ -1,0 +1,144 @@
+.grocery-input {
+    text-align: center;
+    width: 25%;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.grocery-input #main-title {
+    font-size: 2em;
+    border: 2px solid;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.grocery-input form {
+    width: 100%;
+}
+
+.grocery-input #grocery-submit {
+    width: 100%;
+    background-color: #17ec2c;
+    border: #074b0e 1px solid;
+    border-radius: 10px;
+    padding: 4px 10px; /* Reduced padding for smaller height */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.grocery-input #grocery-submit:hover {
+    background-color: #15c925;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+}
+
+.input-container input[type="text"],
+.input-container select {
+    font-size: 1.2em; /* Increased font size */
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.input-container input[type="text"] {
+    flex: 3;
+}
+
+.input-container select {
+    flex: 2;
+    width: 100%;
+}
+
+.grocery-list {
+    margin: 0 auto;
+    width: 25%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.grocery-list table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.grocery-list th, .grocery-list td {
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.grocery-list th:nth-child(2), .grocery-list td:nth-child(2) {
+    width: 20%;
+}
+
+.grocery-list th:nth-child(3), .grocery-list td:nth-child(3) {
+    width: 15%;
+    text-align: right;
+}
+
+.grocery-list button {
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 4px 10px; /* Reduced padding for smaller height */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.grocery-list #delete-button {
+    background-color: #ffc905;
+    border: #8b6402 1px solid;
+    border-radius: 10px;
+}
+
+.grocery-list #delete-button:hover {
+    background-color: #ffb700;
+}
+
+.grocery-list #clear-button {
+    color: white;
+    background-color: #e50000;
+    border: #7f0000 1px solid;
+    border-radius: 10px;
+}
+
+.grocery-list #clear-button:hover {
+    background-color: #d40000;
+}
+
+.crossed-out {
+    text-decoration: line-through;
+}
+
+@media (max-width: 768px) {
+    .grocery-input {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .grocery-list {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .input-container input[type="text"], .input-container select {
+        width: 48%;
+        box-sizing: border-box;
+    }
+}
+
+.main-component-container {
+    font-family: 'Sans-serif';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
