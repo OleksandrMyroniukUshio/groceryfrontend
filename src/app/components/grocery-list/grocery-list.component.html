@@ -1,5 +1,8 @@
 <div class="main-component-container">
-    <div class="grocery-input">
+  <div class="grocery-input">
+    <div class="alert alert-warning" *ngIf="!isLogged()">
+      You're using local storage. Please sign in to save your groceries to server.
+    </div>
       <p id="main-title">Groceries list</p>
       <form id="groceries-action" (submit)="addGrocery(groceryName.value, groceryType.value); $event.preventDefault()">
         <div class="input-container">

@@ -5,11 +5,11 @@ COPY . .
 RUN npm install
 RUN npm run build
 
-FROM nginx:alpine
-COPY --from=build /app/dist/angular-groceries-list /usr/share/nginx/html
+# FROM nginx:alpine
+# COPY --from=build /app/dist/angular-groceries-list /usr/share/nginx/html
 
-COPY ./certs/server.crt /etc/nginx/certs/
-COPY ./certs/server.key /etc/nginx/certs/
+# COPY ./certs/server.crt /etc/nginx/certs/
+# COPY ./certs/server.key /etc/nginx/certs/
 
 
-COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
+# COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf

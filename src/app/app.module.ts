@@ -6,7 +6,9 @@ import { GroceryListComponent } from './components/grocery-list/grocery-list.com
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { IndexPageComponent } from './components/index-page/index-page.component';
-import { NavbarComponent } from './components/navbar/navbar.component'
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { RegisterPageComponent } from './components/register-page/register-page.component'
+import { LoginPageComponent } from './components/login-page/login-page.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { NavbarComponent } from './components/navbar/navbar.component'
     AppComponent,
     GroceryListComponent,
     IndexPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    RegisterPageComponent,
+    LoginPageComponent
     ],
   imports: [
     BrowserModule,
