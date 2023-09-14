@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-4">
@@ -14,6 +7,7 @@
                     <h4 class="card-title mb-4">Sign In</h4>
                     <p class="mb-4 text-inter">Log in to save data and be able to use multiple devices</p>
                     <form (submit)="login(username.value, password.value); $event.preventDefault()">
+                      <div *ngIf="errorMessage" class="alert alert-warning">{{ errorMessage }}</div>
                         <div class="mb-3">
                             <label for="username" class="form-label">Username</label>
                             <input type="text" class="form-control" id="username" placeholder="Enter your username" required #username>
@@ -39,7 +33,3 @@
         </div>
     </div>
 </div>
-
-
-</body>
-</html>
