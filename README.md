@@ -1,4 +1,5 @@
 # Myroniuk's Grocery Frontend  🛒
+## 🔗Please visit the link: [![Telegram](https://img.shields.io/badge/Netlify-00C7B7?style=flat&logo=netlify&logoColor=white)](https://frontend.myroniukgrocery.online)
 
 ## 🛠️ Technologies Used
 
