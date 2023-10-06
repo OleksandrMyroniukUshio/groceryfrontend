@@ -5,3 +5,15 @@ body {
     background-attachment: fixed;
 
 }
+.scale-container {
+    transform: scale(1.5);
+    transform-origin: top center;  /* Adjusting from top left to top center */
+    width: 66.66%;  /* This is 100% divided by 1.5 to counteract the scale */
+    margin: 0 auto;  /* To center the container */
+}
+@media (min-width: 1200px) {
+    .card {
+        max-width: 350px; /* You can adjust this value to your preference */
+        margin: 0 auto; /* Center the card horizontally */
+    }
+}

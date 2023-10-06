@@ -1,6 +1,12 @@
-.grocery-input {
+.main-component-container {
+    font-family: 'Sans-serif';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.grocery-input, .grocery-list {
     text-align: center;
-    width: 25%;
+    width: 30%;
     margin: 0 auto;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -8,31 +14,12 @@
     background-color: #f7f7f7;
 }
 
-.grocery-input #main-title {
+#main-title {
     font-size: 2em;
     border: 2px solid;
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
+    margin: 0.5em 0;
     border-radius: 10px;
     padding: 10px;
-}
-
-.grocery-input form {
-    width: 100%;
-}
-
-.grocery-input #grocery-submit {
-    width: 100%;
-    background-color: #17ec2c;
-    border: #074b0e 1px solid;
-    border-radius: 10px;
-    padding: 4px 10px; /* Reduced padding for smaller height */
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.grocery-input #grocery-submit:hover {
-    background-color: #15c925;
 }
 
 .input-container {
@@ -40,9 +27,8 @@
     gap: 10px;
 }
 
-.input-container input[type="text"],
-.input-container select {
-    font-size: 1.2em; /* Increased font size */
+.input-container input, .input-container select {
+    font-size: 1.2em;
     border-radius: 10px;
     border: 1px solid #ccc;
     padding: 10px;
@@ -57,62 +43,64 @@
     width: 100%;
 }
 
-.grocery-list {
-    margin: 0 auto;
-    width: 25%;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    background-color: #f7f7f7;
-}
-
-.grocery-list table {
+table {
+    font-size: 1.5em;
     width: 100%;
     text-align: center;
     border-collapse: collapse;
 }
 
-.grocery-list th, .grocery-list td {
+th, td {
+    word-wrap: break-word;
+    white-space: normal;
+    max-width: 150px;
     padding: 5px;
-    text-align: center;
     border-radius: 5px;
 }
 
-.grocery-list th:nth-child(2), .grocery-list td:nth-child(2) {
+th:nth-child(2), td:nth-child(2) {
     width: 20%;
 }
 
-.grocery-list th:nth-child(3), .grocery-list td:nth-child(3) {
+th:nth-child(3), td:nth-child(3) {
     width: 15%;
     text-align: right;
 }
 
-.grocery-list button {
-    margin-top: 5px;
-    width: 100%;
+button, #grocery-submit {
     border-radius: 10px;
-    padding: 4px 10px; /* Reduced padding for smaller height */
+    padding: 4px 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-.grocery-list #delete-button {
-    background-color: #ffc905;
-    border: #8b6402 1px solid;
-    border-radius: 10px;
+    width: 100%;
 }
 
-.grocery-list #delete-button:hover {
+#grocery-submit {
+    color: black;
+    background-color: #9EFF00;
+    border: #ccc 1px solid;
+}
+
+#grocery-submit:hover {
+    background-color: #15c925;
+}
+
+#delete-button {
+    background-color: #FFE100;
+    border: #ccc 1px solid;
+}
+
+#delete-button:hover {
     background-color: #ffb700;
 }
 
-.grocery-list #clear-button {
+#clear-button {
     color: white;
-    background-color: #e50000;
-    border: #7f0000 1px solid;
-    border-radius: 10px;
+    background-color: #FF6100;
+    border: 1px solid;
 }
 
-.grocery-list #clear-button:hover {
+#clear-button:hover {
     background-color: #d40000;
 }
 
@@ -120,25 +108,47 @@
     text-decoration: line-through;
 }
 
-@media (max-width: 768px) {
-    .grocery-input {
-        width: 100%;
-        padding: 0 20px;
+@media (max-width: 575.98px) {
+    .grocery-input, .grocery-list {
+        width: 90%;
+        padding: 10px;
     }
-
-    .grocery-list {
+    .input-container input, .input-container select {
         width: 100%;
-        padding: 0 20px;
-    }
-
-    .input-container input[type="text"], .input-container select {
-        width: 48%;
-        box-sizing: border-box;
+        margin-bottom: 10px;
     }
 }
 
-.main-component-container {
-    font-family: 'Sans-serif';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .grocery-input, .grocery-list {
+        width: 85%;
+        padding: 15px;
+    }
+    .input-container input, .input-container select {
+        width: 48%;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .grocery-input, .grocery-list {
+        width: 70%;
+        padding: 20px;
+    }
+    .input-container input, .input-container select {
+        width: 48%;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .grocery-input, .grocery-list {
+        width: 50%;
+        padding: 25px;
+    }
+    .input-container input, .input-container select {
+        width: 48%;
+    }
 }
